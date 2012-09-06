@@ -1,22 +1,26 @@
 Summary:	Evas benchmarking tool
 Summary(pl.UTF-8):	Narzędzie do testowania szybkości Evas
 Name:		expedite
-Version:	1.2.0
+Version:	1.7.0
 Release:	1
 License:	BSD
 Group:		Applications/Graphics
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	554fd639ec2e9dcabb93a90aee325c5b
+# Source0-md5:	1d945d48da88327d80c7857660bf619b
 URL:		http://trac.enlightenment.org/e/wiki/Expedite
 BuildRequires:	DirectFB-devel
 BuildRequires:	SDL-devel
-BuildRequires:	eina-devel >= 1.2.0
-BuildRequires:	eet-devel >= 1.6.0
-BuildRequires:	evas-devel >= 1.2.0
+BuildRequires:	eina-devel >= 1.7.0
+BuildRequires:	eet-devel >= 1.7.0
+BuildRequires:	evas-devel >= 1.7.0
 BuildRequires:	libxcb-devel
 BuildRequires:	pkgconfig
+BuildRequires:	sed >= 4.0
 BuildRequires:	xcb-util-keysyms-devel
 BuildRequires:	xorg-lib-libX11-devel
+Requires:	eet >= 1.7.0
+Requires:	eina >= 1.7.0
+Requires:	evas >= 1.7.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,6 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+sed -i -e '1s,/usr/bin/env python,/usr/bin/python,' $RPM_BUILD_ROOT%{_bindir}/expedite-cmp
 
 %clean
 rm -rf $RPM_BUILD_ROOT
