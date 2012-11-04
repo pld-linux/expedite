@@ -1,12 +1,12 @@
 Summary:	Evas benchmarking tool
 Summary(pl.UTF-8):	Narzędzie do testowania szybkości Evas
 Name:		expedite
-Version:	1.7.0
-Release:	2
+Version:	1.7.1
+Release:	1
 License:	BSD
 Group:		Applications/Graphics
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	1d945d48da88327d80c7857660bf619b
+# Source0-md5:	a1c4d87925f37897882dabd0ed461890
 URL:		http://trac.enlightenment.org/e/wiki/Expedite
 BuildRequires:	DirectFB-devel
 BuildRequires:	SDL-devel
