@@ -1,26 +1,26 @@
 Summary:	Evas benchmarking tool
 Summary(pl.UTF-8):	Narzędzie do testowania szybkości Evas
 Name:		expedite
-Version:	1.7.7
-Release:	2
+Version:	1.7.9
+Release:	1
 License:	BSD
 Group:		Applications/Graphics
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	5a05730ea784a3888fadd62dffc2ab79
+# Source0-md5:	5e44203b6d22a70241a51a7b0b9b3508
 URL:		http://trac.enlightenment.org/e/wiki/Expedite
 BuildRequires:	DirectFB-devel
 BuildRequires:	SDL-devel
-BuildRequires:	eina-devel >= 1.7.7
-BuildRequires:	eet-devel >= 1.7.7
-BuildRequires:	evas-devel >= 1.7.7
+BuildRequires:	eina-devel >= 1.7.9
+BuildRequires:	eet-devel >= 1.7.9
+BuildRequires:	evas-devel >= 1.7.9
 BuildRequires:	libxcb-devel
 BuildRequires:	pkgconfig
 BuildRequires:	sed >= 4.0
 BuildRequires:	xcb-util-keysyms-devel
 BuildRequires:	xorg-lib-libX11-devel
-Requires:	eet >= 1.7.7
-Requires:	eina >= 1.7.7
-Requires:	evas >= 1.7.7
+Requires:	eet >= 1.7.9
+Requires:	eina >= 1.7.9
+Requires:	evas >= 1.7.9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
